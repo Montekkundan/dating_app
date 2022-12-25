@@ -60,3 +60,11 @@ D:\coding\dating_app\API\bin\Debug\net7.0\Humanizer.dll
 D:\coding\dating_app\API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
 D:\coding\dating_app\API\bin\Debug\net7.0\Mono.TextTemplating.dll
 D:\coding\dating_app\API\bin\Debug\net7.0\System.CodeDom.dll
+D:\coding\dating_app\API\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\coding\dating_app\API\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\coding\dating_app\API\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\coding\dating_app\API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\coding\dating_app\API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\coding\dating_app\API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\coding\dating_app\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\coding\dating_app\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
