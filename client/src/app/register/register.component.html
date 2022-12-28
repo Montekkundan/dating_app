@@ -1,18 +1,19 @@
-<form #registerForm="ngForm" (ngSubmit)="register()" autocomplete="off">
-  <h2 class="text-center text-primary">
+<div class="flex items-center justify-center" >
+<form #registerForm="ngForm" (ngSubmit)="register()" autocomplete="off" @fadeIn >
+  <h2>
     Sign Up
   </h2>
-  <hr>
-  <div class="mb-3">
-    <input type="text" class="form-control" name="username" [(ngModel)] = "model.username" placeholder="Username">
-    <input type="password" class="form-control" name="password" [(ngModel)] = "model.password" placeholder="Password">
+  <div class="mb-3" >
+
+    <input type="text" name="username" [(ngModel)] = "model.username"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Username" required>
+
+    <input type="password" name="password" [(ngModel)] = "model.password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Password" required>
   </div>
   <div class="text-center">
-    <button class="btn btn-success me-2" type="submit">
-      Register
-    </button>
-    <button class="btn btn-default" type="button" (click)="cancel()">
-      Cancel
-    </button>
+    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Register</button>
+
+    <button  (click)="cancel()" type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Cancel</button>
+
   </div>
 </form>
+</div>

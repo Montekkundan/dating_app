@@ -1,17 +1,15 @@
-<div class="container mt-5">
+<div class="" >
  <div *ngIf="!registerMode" class="text-center">
   <h1>Find your Match</h1>
   <p class="lead">Come on in to view your matches..all you need to do is sign up!</p>
   <div class="text-center">
-    <button (click)="registerToggle()" class="btn btn-primary btn-lg me-2">
-      Register
-    </button>
-    <button class="btn btn-primary btn-lg me-2">
-      Learn More
-    </button>
+
+    <button (click)="registerToggle()" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Register</button>
+    <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Learn More</button>
+
   </div>
  </div>
- <div *ngIf="registerMode" class="container">
+ <div *ngIf="registerMode" >
   <div class="row justify-content-center">
       <div class="col-4">
         <app-register  (cancelRegister)="cancelRegisterMode($event)"></app-register>

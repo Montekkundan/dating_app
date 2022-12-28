@@ -1,0 +1,25 @@
+<h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-black">Inter Server Error</h1>
+<h1 class=" text-xl font-semibold text-gray-500 dark:text-gray-400">refereshing the page will make the errors disappear</h1>
+
+<ng-container *ngIf="error">
+  <h3 class="mt-4 text-3xl font-extrabold tracking-tight leading-none text-gray-900  dark:text-black">
+    Error: {{error.message}}
+  </h3>
+  <p>Note: If you are seeing this then angular is probably not to blame.</p>
+  <p class="mt-2 text-lg font-semibold ">What to do next?!</p>
+  <ol class="space-y-1 max-w-md list-decimal list-inside ">
+    <li>
+        Open Chrome dev tools(or any dev tools), then check the failing request in the network tab.
+    </li>
+    <li>
+      Examine the request URL - What API endpoint are you requesting?
+    </li>
+    <li>
+      Reporduce the problem in Postman - if we get same error, angular is 100% not the problem.
+    </li>
+  </ol>
+  <p>Following the Stack Trace - the first few lines will tell you which line of code caused the issue in API</p>
+  <code class="text-black bg-emerald-300">
+    {{error.details}}
+  </code>
+</ng-container>
