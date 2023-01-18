@@ -1,0 +1,96 @@
+
+<div class="flex  flex-col lg:flex-row">
+  <section class="p-3 bg-blueGray-50 basis-1/4" *ngIf="member">
+
+    <div class="w-full px-4 mx-auto">
+      <div class=" flex flex-col min-w-0 break-words bg-white dark:bg-gray-900  w-full mb-6 shadow-xl rounded-lg mt-16">
+        <div class="">
+          <div class="pt-8 flex justify-center">
+            <h1 class="text-2xl font-extrabold text-black dark:text-white">Your Profile</h1>
+          </div>
+          <div class="flex pt-8 justify-center">
+            <div class=" flex justify-center">
+              <div class="">
+                <img alt="..." src="{{member.photoUrl}}" class="shadow-xl rounded-full h-auto align-middle border-none max-w-150-px">
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-12 dark:text-gray-200">
+            <h3 class="text-xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+              {{member.knownAs}}
+            </h3>
+            <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
+              <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
+              {{member.city}}, {{member.country}}
+            </div>
+            <div class="mb-2 text-blueGray-600 mt-10">
+              <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i>
+              Age -  {{member.age}}
+            </div>
+            <div class="mb-2 text-blueGray-600">
+              <i class="fas fa-university mr-2 text-lg text-blueGray-400"></i>
+              Last active -  {{member.lastActive}}
+            </div>
+            <div class="mb-10 text-blueGray-600">
+              <i class="fas fa-university mr-2 text-lg text-blueGray-400"></i>
+             Member since -  {{member.created}}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section class="basis-3/4" *ngIf="member">
+      <div class="p-4" *ngIf="editForm.dirty">
+        <div class="mx-auto text-center p-4 mb-4 text-sm text-yellow-700 bg-yellow-100 rounded-lg dark:bg-yellow-200 dark:text-yellow-800" role="alert">
+          <span class="font-medium">Warning alert!</span> You have made changes save before leaving!
+        </div>
+      </div>
+      <div class="bg-white dark:bg-gray-900 m-7 shadow-xl rounded-lg">
+        <div class="mt-10 py-10 p3border-t border-blueGray-200 text-center dark:text-gray-200">
+          <div class="flex flex-wrap justify-center">
+            <div class="w-full lg:w-9/12 px-4">
+              <form #editForm="ngForm" id="editForm" (ngSubmit)="updateMember()">
+              <h3 class="text-xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+                Introduction
+              </h3>
+              <textarea [(ngModel)]="member.introduction" name="introduction" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your intro here..."></textarea>
+
+              <h3 class=" pt-6 text-xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+                Looking for
+              </h3>
+              <textarea [(ngModel)]="member.lookingFor" name="lookingFor" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your intro here..."></textarea>
+              <h3 class="pt-6 text-xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+                Intersts
+              </h3>
+              <textarea [(ngModel)]="member.interests" name="interests" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your intro here..."></textarea>
+              <h3 class="pt-6 text-xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+                Location Details
+              </h3>
+              <div>
+                <div class="relative">
+                  <input type="text" [(ngModel)]="member.city" name="city"  class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                  <label for="floating_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">City</label>
+                </div>
+                <div class="pt-4 relative">
+                  <input type="text" [(ngModel)]="member.country" name="country"  class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                  <label for="floating_filled" class="pt-4 absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Country</label>
+                </div>
+              </div>
+            </form>
+            <h3 class="pt-6 text-xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+              Photos
+            </h3>
+             <p>Edit photos here</p>
+            </div>
+          </div>
+          <div class="p-10 ">
+            <button type="submit" [disabled]="!editForm.dirty"  form="editForm" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Save Changes</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>

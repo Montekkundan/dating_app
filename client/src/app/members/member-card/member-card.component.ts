@@ -9,7 +9,7 @@ import { Member } from 'src/app/_models/member';
 export class MemberCardComponent implements OnInit {
   @Input() member: Member | undefined;
 
-  a:number = 1;
+  a:number = 2;
   randomImage: string | undefined;
 
 
