@@ -39,4 +39,10 @@ public class UsersController : BaseApiController
 
         
     }
+
+    [HttpPut]
+    public async Task<ActionResult> UpdateUser(MemberUpdateDto memberUpdateDto)
+    {
+        // var username = User.
+    }
 }
