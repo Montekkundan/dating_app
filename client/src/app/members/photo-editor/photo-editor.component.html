@@ -13,21 +13,22 @@
 
     <div class="col-md-3">
 
-        <h3>Add Photos</h3>
+        <h3 class="text-2xl font-extrabold dark:text-white">Add Photos</h3>
 
         <div ng2FileDrop
              [ngClass]="{'nv-file-over': hasBaseDropZoneOver}"
              (fileOver)="fileOverBase($event)"
              [uploader]="uploader"
-             class="well my-drop-zone">
+             class="my-drop-zone">
             Drop photos here
         </div>
-
+        <div class="p-2 space-y-4 ">
         Multiple
-        <input type="file" ng2FileSelect [uploader]="uploader" multiple  /><br/>
+        <input type="file" class="" ng2FileSelect [uploader]="uploader" multiple  /><br/>
 
         Single
         <input type="file" ng2FileSelect [uploader]="uploader" />
+      </div>
     </div>
 
     <div class="col-md-9" style="margin-bottom: 40px">
@@ -64,22 +65,22 @@
             </tbody>
         </table>
 
-        <div>
-            <div>
+        <div class=" space-x-4">
+            <div class="pb-4">
                 Queue progress:
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': uploader?.progress + '%' }"></div>
                 </div>
             </div>
-            <button type="button" class="btn btn-success btn-s"
+            <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     (click)="uploader?.uploadAll()" [disabled]="!uploader?.getNotUploadedItems()?.length">
                 <span class="glyphicon glyphicon-upload"></span> Upload all
             </button>
-            <button type="button" class="btn btn-warning btn-s"
+            <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     (click)="uploader?.cancelAll()" [disabled]="!uploader?.isUploading">
                 <span class="glyphicon glyphicon-ban-circle"></span> Cancel all
             </button>
-            <button type="button" class="btn btn-danger btn-s"
+            <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     (click)="uploader?.clearQueue()" [disabled]="!uploader?.queue?.length">
                 <span class="glyphicon glyphicon-trash"></span> Remove all
             </button>

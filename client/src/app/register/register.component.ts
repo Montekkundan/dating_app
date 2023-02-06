@@ -2,6 +2,7 @@ import { AccountService } from './../_services/account.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { FormControl, FormGroup } from '@angular/forms';
 
 const enterTransition = transition(':enter', [
   style({
@@ -26,23 +27,33 @@ const fadeOut = trigger('fadeOut', [exitTransition])
 export class RegisterComponent implements OnInit {
   @Output() cancelRegister = new EventEmitter();
   model: any = {};
+  registerForm: FormGroup | undefined;
 
   constructor(private accountService: AccountService,  private toastr: ToastrService) { }
   ngOnInit(): void {
   }
 
+  initializeForm() {
+    this.registerForm = new FormGroup({
+      username: new FormControl(),
+      password: new FormControl(),
+      confirmPassword: new FormControl(),
+    })
+  }
+
   register()
   {
-    this.accountService.register(this.model).subscribe(
-      {
-        next: response =>
-        {
-          this.cancel();
-        },
-        error: error => this.toastr.error(error.error),
+    console.log(this.registerForm?.value);
+    // this.accountService.register(this.model).subscribe(
+    //   {
+    //     next: response =>
+    //     {
+    //       this.cancel();
+    //     },
+    //     error: error => this.toastr.error(error.error),
 
-      }
-    )
+    //   }
+    // )
   }
 
   cancel()
