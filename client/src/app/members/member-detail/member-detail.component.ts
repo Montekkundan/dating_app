@@ -15,6 +15,7 @@ export class MemberDetailComponent implements OnInit {
   member: Member | undefined;
   galleryOptions: NgxGalleryOptions[] =[];
   galleryImages: NgxGalleryImage[] = [];
+  randomImage: string | undefined;
 
   constructor(private memberService: MembersService, private route: ActivatedRoute)
   {
@@ -22,6 +23,7 @@ export class MemberDetailComponent implements OnInit {
   }
   ngOnInit(): void {
     this.loadMember();
+    this.randomImage = this.getRandomImage();
 
     this.galleryOptions = [
      {
@@ -72,5 +74,12 @@ export class MemberDetailComponent implements OnInit {
       }
     });
   }
+  getRandomImage() {
+    const images = 15
+    const rndInt = Math.floor(Math.random() * images) + 1
+    const image = './assets/user_images/' + rndInt +'.jpg'
+    return image;
+  }
+
 
 }

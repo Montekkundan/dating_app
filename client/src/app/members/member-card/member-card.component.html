@@ -3,7 +3,7 @@
       <img class="rounded-t-lg flex-auto" src="{{randomImage}}" alt="{{member.knownAs}}" >
     </div>
     <div class="flex  card card_wrapper" *ngIf="a > 1">
-      <img class="rounded-t-lg flex-auto" src="{{member.photoUrl}}" alt="{{member.knownAs}}" >
+      <img class="rounded-t-lg flex-auto" [src]="member.photoUrl != null ? member.photoUrl : randomImage"  alt="{{member.knownAs}}" >
     </div>
   <div class="p-5">
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{member.knownAs}}</h5>

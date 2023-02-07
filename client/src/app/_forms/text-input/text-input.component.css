@@ -1,0 +1,5 @@
+.is-invalid {
+  outline-style: solid;
+  outline-color: #ef4444;
+  outline-width: 4px;
+}

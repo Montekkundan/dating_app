@@ -21,7 +21,7 @@ export class MemberEditComponent implements OnInit  {
   }
   member: Member | undefined;
   user: User | null = null;
-
+  randomImage: string | undefined;
 
   constructor(private accountService: AccountService, private memberService: MembersService, private toastr: ToastrService) {
     this.accountService.currentUser$.pipe(take(1)).subscribe({
@@ -30,7 +30,8 @@ export class MemberEditComponent implements OnInit  {
   }
 
   ngOnInit() {
-    this.loadMember()
+    this.loadMember();
+    this.randomImage = this.getRandomImage();
   }
 
   loadMember() {
@@ -48,6 +49,11 @@ export class MemberEditComponent implements OnInit  {
         this.editForm?.reset(this.member);
       }
     })
-
+  }
+  getRandomImage() {
+    const images = 15
+    const rndInt = Math.floor(Math.random() * images) + 1
+    const image = './assets/user_images/' + rndInt +'.jpg'
+    return image;
   }
 }

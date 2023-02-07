@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AccountService } from '../_services/account.service';
 
 
 @Component({
@@ -9,7 +11,8 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   registerMode = false;
   users:any;
-  constructor() { }
+  model: any ={};
+  constructor(public accountService: AccountService,  private router: Router) { }
   ngOnInit(): void {
   }
 
@@ -21,5 +24,10 @@ export class HomeComponent implements OnInit {
   cancelRegisterMode(event: boolean)
   {
     this.registerMode = event;
+  }
+  login() {
+    this.accountService.login(this.model).subscribe({
+      next: response => this.router.navigateByUrl('/members'),
+    })
   }
 }

@@ -12,7 +12,7 @@
         <div class="flex pt-8 justify-center">
           <div class=" flex justify-center">
             <div class="">
-              <img alt="..." src="{{member.photoUrl}}" class="shadow-xl rounded-full h-auto align-middle border-none max-w-150-px">
+              <img alt="..." [src]="member.photoUrl != null ? member.photoUrl : randomImage" class="shadow-xl rounded-full h-[200px] align-middle border-none max-w-150-px">
             </div>
           </div>
           <!-- <div class="w-full px-4 text-center mt-20">
