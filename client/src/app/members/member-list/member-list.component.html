@@ -1,3 +1,38 @@
+<div class="p-5">
+  <h2 class="mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-black">Your matches - <mark class="px-2 text-white bg-blue-600 rounded dark:bg-blue-500"> {{pagination?.totalItems}}</mark> found </h2>
+</div>
+<div *ngIf="userParams" class="flex  justify-center">
+  <form #form="ngForm" class="flex mb-3" (ngSubmit)="loadMembers()" autocomplete="off" class="flex flex-col space-y-3">
+    <div class="flex flex-col md:flex-row md:space-x-4">
+      <div>
+            <label for="age_from" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Age from:</label>
+            <input type="number" name="minAge" id="age_from" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" [(ngModel)]="userParams.minAge">
+          </div>
+          <div>
+            <label for="age_to" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Age to:</label>
+            <input type="number" name="maxAge" id="age_to" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" [(ngModel)]="userParams.maxAge">
+          </div>
+          <div>
+            <label for="gender" class="block mb-2 text-sm font-medium text-gray-900 dark:text-dark">Show: </label>
+            <select id="gender" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            [(ngModel)]="userParams.gender" name="gender">
+              <option selected>Choose a gender</option>
+              <option *ngFor="let gender of genderList" [value]="gender.value">
+                {{gender.display}}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="flex justify-center" >
+          <div >
+            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Apply</button>
+          </div>
+          <div>
+            <button (click)="resetFilters()" type="submit" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Reset</button>
+          </div>
+        </div>
+  </form>
+</div>
 <div class="m-6 lg:m-20">
 <div class="grid grid-cols-1 gap-4 md:grid-cols-4" >
   <div class="" *ngFor="let member of members">
