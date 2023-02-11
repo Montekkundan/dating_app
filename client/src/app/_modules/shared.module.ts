@@ -6,6 +6,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { FileUploadModule } from 'ng2-file-upload';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 
 
@@ -24,7 +25,8 @@ import { FileUploadModule } from 'ng2-file-upload';
     NgxSpinnerModule.forRoot({
       type: 'square-jelly-box'
     }),
-    FileUploadModule
+    FileUploadModule,
+    PaginationModule.forRoot(),
   ],
   exports: [
       BsDropdownModule,
@@ -32,7 +34,8 @@ import { FileUploadModule } from 'ng2-file-upload';
       TabsModule,
       NgxGalleryModule,
       NgxSpinnerModule,
-      FileUploadModule
+      FileUploadModule,
+      PaginationModule
   ]
 })
 export class SharedModule { }
