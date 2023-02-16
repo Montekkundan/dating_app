@@ -1,3 +1,5 @@
+import { ToastrService } from 'ngx-toastr';
+import { MembersService } from 'src/app/_services/members.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { Member } from 'src/app/_models/member';
 
@@ -13,12 +15,19 @@ export class MemberCardComponent implements OnInit {
   randomImage: string | undefined;
 
 
-  constructor()
+  constructor(private memberSerive: MembersService, private toastr: ToastrService)
   {
 
   }
   ngOnInit() {
     this.randomImage = this.getRandomImage();
+  }
+
+  addLike(member: Member)
+  {
+    this.memberSerive.addLike(member.userName).subscribe({
+      next: () => this.toastr.success('You have liked '+ member.knownAs)
+    })
   }
 
   getRandomImage() {

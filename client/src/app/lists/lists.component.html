@@ -1,1 +1,37 @@
-<p>lists works!</p>
+<div>
+  <h2>{{predicate === 'liked'? 'Members I Like' : 'Members who like me'}}</h2>
+</div>
+
+<div>
+  <div>
+    <div name="predicate">
+      <button btnRadio="liked" [(ngModel)]="predicate" (click)="loadLikes()"
+      class="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Members I like</button>
+      <button btnRadio="likedBy" [(ngModel)]="predicate" (click)="loadLikes()"
+      class="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Members who like me</button>
+    </div>
+  </div>
+
+  <div class="m-6 lg:m-20">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-4" >
+      <div class="" *ngFor="let member of members">
+        <app-member-card [member]="member"></app-member-card>
+      </div>
+    </div>
+    </div>
+</div>
+<div class="pb-10" *ngIf="pagination">
+  <pagination
+  class="flex justify-center space-x-3 p-5 px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white mr-20 ml-20 "
+  [boundaryLinks]="true"
+  [totalItems]="pagination.totalItems"
+  [itemsPerPage]="pagination.itemsPerPage"
+  [maxSize]="5"
+  [(ngModel)] = "pagination.currentPage"
+  (pageChanged)="pageChanged($event)"
+  previousText="&lsaquo;"
+  nextText="&rsaquo;"
+  firstText="&laquo;"
+  lastText="&raquo;">
+  </pagination>
+</div>

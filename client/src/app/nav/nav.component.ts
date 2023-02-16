@@ -11,7 +11,7 @@ import { AccountService } from '../_services/account.service';
 export class NavComponent implements OnInit
 {
   model: any ={};
-
+  // TODO add member service reset userParams to reset filter on new UserLogin
 
   constructor(public accountService: AccountService, private router: Router, private toastr: ToastrService)
   { }
