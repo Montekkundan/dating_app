@@ -1,1 +1,88 @@
-<p>messages works!</p>
+<div class="flex pt-5 justify-center">
+  <p>You are viewing your {{container}} messages</p>
+</div>
+<div class="flex pt-5 justify-center">
+  <div name="container">
+    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+    btnRadio="Unread"
+    [(ngModel)]="container"
+    (click)="loadMessages()"
+    >Unread</button>
+    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+    btnRadio="Inbox"
+    [(ngModel)]="container"
+    (click)="loadMessages()"
+    >Inbox</button>
+    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+    btnRadio="Outbox"
+    [(ngModel)]="container"
+    (click)="loadMessages()"
+    >Outbox</button>
+  </div>
+</div>
+
+<div *ngIf="!messages || messages.length === 0" class="flex justify-center pt-10">
+  <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black">No <span class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">Messages</span></h1>
+</div>
+<div *ngIf="messages && messages.length > 0" class="pl-5 pr-5 ">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 ">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr>
+            <th scope="col" class="px-6 py-3">
+                Message
+            </th>
+            <th scope="col" class="px-6 py-3">
+                From /to
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Sent / Recieved
+            </th>
+            <th scope="col" class="px-6 py-3">
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let message of messages" routerLink="{{container === 'Outbox' ? '/members/' + message.recipientUsername : '/members/' + message.senderUsername}}" class="bg-white cursor-pointer  border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                {{message.content}}
+            </td>
+            <td class="px-6 py-4">
+                <div *ngIf="container === 'Outbox'">
+                <img  class="w-10 rounded-full" [src]="message.recipientPhotoUrl  != null ? message.recipientPhotoUrl  : randomImage" alt="recipient photo">
+                <strong>{{message.recipientUsername | titlecase}}</strong>
+                </div>
+                <div *ngIf="container !== 'Outbox'">
+                  <img class="w-10 rounded-full"  [src]="message.senderPhotoUrl  != null ? message.senderPhotoUrl  : randomImage" alt="recipient photo">
+                  <strong>{{message.senderUsername | titlecase}}</strong>
+                  </div>
+            </td>
+            <td class="px-6 py-4">
+                {{message.messageSent | timeago}}
+            </td>
+            <td class="px-6 py-4">
+              <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+
+              >Delete</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div class="pb-10 pt-10" *ngIf="pagination && messages && messages.length > 0">
+  <pagination
+  class="flex justify-center space-x-3 p-5 px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white mr-20 ml-20 "
+  [boundaryLinks]="true"
+  [totalItems]="pagination.totalItems"
+  [itemsPerPage]="pagination.itemsPerPage"
+  [maxSize]="5"
+  [(ngModel)] = "pagination.currentPage"
+  (pageChanged)="pageChanged($event)"
+  previousText="&lsaquo;"
+  nextText="&rsaquo;"
+  firstText="&laquo;"
+  lastText="&raquo;">
+  </pagination>
+</div>
