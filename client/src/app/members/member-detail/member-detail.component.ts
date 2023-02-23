@@ -16,6 +16,7 @@ export class MemberDetailComponent implements OnInit {
   galleryOptions: NgxGalleryOptions[] =[];
   galleryImages: NgxGalleryImage[] = [];
   randomImage: string | undefined;
+  messageDisplay = false;
 
   constructor(private memberService: MembersService, private route: ActivatedRoute)
   {
@@ -24,7 +25,6 @@ export class MemberDetailComponent implements OnInit {
   ngOnInit(): void {
     this.loadMember();
     this.randomImage = this.getRandomImage();
-
     this.galleryOptions = [
      {
       width: '450px',
@@ -81,5 +81,13 @@ export class MemberDetailComponent implements OnInit {
     return image;
   }
 
-
+  //TODO use these functions in message list as well as user image, how to use these functions in another file.
+  displayMessages()
+  {
+    this.messageDisplay = true;
+  }
+  displayProfle()
+  {
+    this.messageDisplay = false;
+  }
 }
