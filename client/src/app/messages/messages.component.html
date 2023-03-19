@@ -43,7 +43,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let message of messages" routerLink="{{container === 'Outbox' ? '/members/' + message.recipientUsername : '/members/' + message.senderUsername}}" class="bg-white cursor-pointer  border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+        <tr [hidden]="loading" *ngFor="let message of messages" routerLink="{{container === 'Outbox' ? '/members/' + message.recipientUsername : '/members/' + message.senderUsername}}" class="bg-white cursor-pointer  border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 {{message.content}}
             </td>
@@ -61,7 +61,7 @@
                 {{message.messageSent | timeago}}
             </td>
             <td class="px-6 py-4">
-              <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              <button (click)="$event.stopPropagation()" (click)="deleteMessage(message.id)" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
 
               >Delete</button>
             </td>
@@ -71,7 +71,7 @@
 </table>
 </div>
 
-<div class="pb-10 pt-10" *ngIf="pagination && messages && messages.length > 0">
+<div class="pb-10 pt-10" *ngIf="!loading && pagination && messages && messages.length > 0">
   <pagination
   class="flex justify-center space-x-3 p-5 px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white mr-20 ml-20 "
   [boundaryLinks]="true"
