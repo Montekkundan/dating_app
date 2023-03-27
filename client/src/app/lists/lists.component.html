@@ -1,9 +1,9 @@
-<div>
-  <h2>{{predicate === 'liked'? 'Members I Like' : 'Members who like me'}}</h2>
+<div class="flex justify-center">
+  <h2 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl dark:text-black">{{predicate === 'liked'? 'Members I Like' : 'Members who like me'}}</h2>
 </div>
 <!-- TODO Beautify stuff -->
-<div>
-  <div>
+<div >
+  <div class="flex justify-center">
     <div name="predicate">
       <button btnRadio="liked" [(ngModel)]="predicate" (click)="loadLikes()"
       class="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Members I like</button>
@@ -17,10 +17,13 @@
       <div class="" *ngFor="let member of members">
         <app-member-card [member]="member"></app-member-card>
       </div>
+      <div *ngIf="!members || members.length === 0" class="flex justify-center pt-10">
+        <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black">No <span class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">{{predicate === 'liked'? 'Members liked' : 'Members like you'}}</span></h1>
+      </div>
     </div>
     </div>
 </div>
-<div class="pb-10" *ngIf="pagination">
+<div class="pb-10" *ngIf="pagination && members && members.length > 0">
   <pagination
   class="flex justify-center space-x-3 p-5 px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white mr-20 ml-20 "
   [boundaryLinks]="true"
