@@ -1,16 +1,25 @@
-<div class="flex justify-center">
-  <h2 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl dark:text-black">{{predicate === 'user'? 'User Managenment' : 'Photo Management'}}</h2>
+<div *ngIf="predicate === 'user'" class="flex justify-center">
+  <h2 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl dark:text-black">User Managenment</h2>
+</div>
+<div *ngIf="predicate !== 'user'" class="flex justify-center">
+  <h2 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl dark:text-black">Photo Management</h2>
 </div>
 <div>
   <div class="flex justify-center">
     <div name="predicate">
+      <button *appHasRole="['Admin', 'Moderator']" btnRadio="photo" [(ngModel)]="predicate" onclick="changePanel()"
+      class="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Photo Management</button>
       <button *appHasRole="['Admin']" btnRadio="user" [(ngModel)]="predicate" onclick="changePanel()"
       class="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">User Managenment</button>
-      <button btnRadio="photo" [(ngModel)]="predicate" onclick="changePanel()"
-      class="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Photo Management</button>
+
     </div>
   </div>
   <div>
-
+    <div *ngIf="predicate === 'user'">
+      <app-user-management ></app-user-management>
+    </div>
+    <div *ngIf="predicate !== 'user'">
+      <app-photo-management ></app-photo-management>
+    </div>
   </div>
 </div>

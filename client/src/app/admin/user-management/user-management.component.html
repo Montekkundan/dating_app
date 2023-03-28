@@ -1,1 +1,31 @@
-<p>user-management works!</p>
+<div  class="pl-5 pr-5 ">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 ">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr>
+            <th scope="col" class="px-6 py-3">
+                Username
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Active Roles
+            </th>
+            <th scope="col" class="px-6 py-3">
+
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let user of users"  class="bg-white cursor-pointer  border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                {{user.username}}
+            </td>
+            <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              {{user.roles}}
+          </td>
+          <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            <button data-modal-target="defaultModal" data-modal-toggle="defaultModal"  (click)="openRolesModal(user)" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Edit roles</button>
+        </td>
+        </tr>
+    </tbody>
+</table>
+</div>
