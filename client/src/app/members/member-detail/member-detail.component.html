@@ -36,9 +36,12 @@
               </div> -->
             </div>
             <div class="text-center mt-12 dark:text-gray-200">
+              <div>
               <h3 class="text-xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
                 {{member.knownAs}}
               </h3>
+              <span *ngIf="(presenceService.onlineUsers$ | async)?.includes(member.userName)" class="bg-green-100 h-6 text-green-800 text-sm font-medium  px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">Online</span>
+            </div>
               <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
                 <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
                 {{member.city}}, {{member.country}}

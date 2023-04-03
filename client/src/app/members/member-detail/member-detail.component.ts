@@ -3,6 +3,8 @@ import { Member } from './../../_models/member';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions } from '@kolkov/ngx-gallery';
+import { MessageService } from 'src/app/_services/message.service';
+import { PresenceService } from 'src/app/_services/presence.service';
 
 
 @Component({
@@ -18,7 +20,7 @@ export class MemberDetailComponent implements OnInit {
   randomImage: string | undefined;
   messageDisplay = false;
 
-  constructor(private memberService: MembersService, private route: ActivatedRoute)
+  constructor(private memberService: MembersService, private route: ActivatedRoute, public presenceService: PresenceService)
   {
 
   }

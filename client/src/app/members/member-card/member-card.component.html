@@ -6,7 +6,11 @@
       <img class="rounded-t-lg flex-auto" [src]="member.photoUrl != null ? member.photoUrl : randomImage"  alt="{{member.knownAs}}" >
     </div>
   <div class="p-5">
+    <div class="flex justify-between">
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{member.knownAs}}</h5>
+
+          <span *ngIf="(presenceService.onlineUsers$ | async)?.includes(member.userName)" class="bg-green-100 h-6 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">Online</span>
+        </div>
       <p class=" font-normal text-gray-700 dark:text-gray-400">Age: {{member.age}}</p>
       <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">City: {{member.city}}</p>
       <div class="grid grid-cols-3 gap-4">
