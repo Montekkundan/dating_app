@@ -1,7 +1,7 @@
 import { MembersService } from './../../_services/members.service';
 import { Member } from './../../_models/member';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions } from '@kolkov/ngx-gallery';
 import { MessageService } from 'src/app/_services/message.service';
 import { PresenceService } from 'src/app/_services/presence.service';
@@ -26,13 +26,14 @@ export class MemberDetailComponent implements OnInit, OnDestroy {
   messages: Message[] = [];
   user?: User;
 
-  constructor(private memberService: MembersService, private route: ActivatedRoute, public presenceService: PresenceService, private messageService: MessageService, private accountService: AccountService)
+  constructor(private memberService: MembersService, private route: ActivatedRoute, public presenceService: PresenceService, private messageService: MessageService, private accountService: AccountService, private router: Router)
   {
     this.accountService.currentUser$.pipe(take(1)).subscribe({
       next: user => {
         if(user) this.user = user;
       }
-    })
+    });
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
   ngOnInit(): void {
     this.loadMember();
