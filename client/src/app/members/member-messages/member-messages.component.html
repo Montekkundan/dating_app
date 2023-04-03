@@ -1,10 +1,10 @@
 <div class="font-black pb-[100px]">
   <div>
-    <div *ngIf="messages.length === 0">
+    <div *ngIf="(messageService.messageThread$ | async)?.length === 0">
       No messages yet.... say hi!
     </div>
-    <ul class=" pb-[100px]" *ngIf="messages.length > 0">
-      <li *ngFor="let message of messages">
+    <ul class=" pb-[100px]" *ngIf="(messageService.messageThread$ | async)!.length > 0">
+      <li *ngFor="let message of (messageService.messageThread$ | async)">
         <div class="flex justify-between pl-7 pr-7">
           <span class="cursor-pointer" routerLink="{{message.senderUsername !== username ? '/members/' + message.senderUsername : '/members/' + message.senderUsername}}" >
             <img class="w-10 rounded-full" [src]="message.senderPhotoUrl != null ? message.senderPhotoUrl : randomImage" alt="image of user">

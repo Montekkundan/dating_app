@@ -1,10 +1,14 @@
 import { MembersService } from './../../_services/members.service';
 import { Member } from './../../_models/member';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions } from '@kolkov/ngx-gallery';
 import { MessageService } from 'src/app/_services/message.service';
 import { PresenceService } from 'src/app/_services/presence.service';
+import { Message } from 'src/app/_models/message';
+import { AccountService } from 'src/app/_services/account.service';
+import { take } from 'rxjs';
+import { User } from 'src/app/_models/user';
 
 
 @Component({
@@ -12,17 +16,23 @@ import { PresenceService } from 'src/app/_services/presence.service';
   templateUrl: './member-detail.component.html',
   styleUrls: ['./member-detail.component.css']
 })
-export class MemberDetailComponent implements OnInit {
+export class MemberDetailComponent implements OnInit, OnDestroy {
 
   member: Member | undefined;
   galleryOptions: NgxGalleryOptions[] =[];
   galleryImages: NgxGalleryImage[] = [];
   randomImage: string | undefined;
   messageDisplay = false;
+  messages: Message[] = [];
+  user?: User;
 
-  constructor(private memberService: MembersService, private route: ActivatedRoute, public presenceService: PresenceService)
+  constructor(private memberService: MembersService, private route: ActivatedRoute, public presenceService: PresenceService, private messageService: MessageService, private accountService: AccountService)
   {
-
+    this.accountService.currentUser$.pipe(take(1)).subscribe({
+      next: user => {
+        if(user) this.user = user;
+      }
+    })
   }
   ngOnInit(): void {
     this.loadMember();
@@ -46,8 +56,9 @@ export class MemberDetailComponent implements OnInit {
       thumbnailMargin: 20
     },
     ]
-
-
+  }
+  ngOnDestroy(): void {
+    this.messageService.stopHubConnection();
   }
 
   getImages(){
@@ -76,6 +87,15 @@ export class MemberDetailComponent implements OnInit {
       }
     });
   }
+  loadMessage()
+  {
+    if(this.member)
+    {
+      this.messageService.getMessageThread(this.member.userName).subscribe({
+        next: messages => this.messages = messages
+      })
+    }
+  }
   getRandomImage() {
     const images = 15
     const rndInt = Math.floor(Math.random() * images) + 1
@@ -87,6 +107,13 @@ export class MemberDetailComponent implements OnInit {
   displayMessages()
   {
     this.messageDisplay = true;
+    // this.loadMessage()
+    if(this.user && this.member){
+      this.messageService.createHubConnection(this.user, this.member.userName);
+    }else
+    {
+      this.messageService.stopHubConnection();
+    }
   }
   displayProfle()
   {
