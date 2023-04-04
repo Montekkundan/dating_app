@@ -142,4 +142,27 @@ public class UsersController : BaseApiController
 
         return BadRequest("Problem deleting photo");
     }
+    [HttpDelete("delete-user/{username}")]
+    public async Task<ActionResult> DeleteUser(string username)
+    {
+        var user = await _uow.UserRepository.GetUserByUsernameAsync(username);
+
+        if (user == null) return NotFound();
+
+        // Delete user's photos
+        foreach (var photo in user.Photos)
+        {
+            if (photo.PublicId != null)
+            {
+                var result = await _photoService.DeletePhotoAsync(photo.PublicId);
+                if (result.Error != null) return BadRequest(result.Error.Message);
+            }
+        }
+
+        _uow.UserRepository.delete(user);
+
+        if (await _uow.Complete()) return Ok();
+
+        return BadRequest("Failed to delete user.");
+    }
 }

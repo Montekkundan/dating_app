@@ -30,6 +30,8 @@ import { UserManagementComponent } from './admin/user-management/user-management
 import { FooterComponent } from './footer/footer.component';
 import { PhotoManagementComponent } from './admin/photo-management/photo-management.component';
 import { RolesModalComponent } from './modals/roles-modal/roles-modal.component';
+import { PrivacyPolicyComponent } from './legal/privacy-policy/privacy-policy.component';
+import { TermsAndConditionsComponent } from './legal/terms-and-conditions/terms-and-conditions.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { RolesModalComponent } from './modals/roles-modal/roles-modal.component'
     UserManagementComponent,
     FooterComponent,
     PhotoManagementComponent,
-    RolesModalComponent
+    RolesModalComponent,
+    PrivacyPolicyComponent,
+    TermsAndConditionsComponent
   ],
   imports: [
     BrowserAnimationsModule,

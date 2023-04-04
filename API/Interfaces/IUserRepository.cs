@@ -7,6 +7,7 @@ namespace API.Interfaces
     public interface IUserRepository
     {
         void update(AppUser user);
+        void delete(AppUser user);
 
         Task<IEnumerable<AppUser>> GetUsersAsync();
 

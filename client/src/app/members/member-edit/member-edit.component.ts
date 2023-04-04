@@ -6,6 +6,7 @@ import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Member } from 'src/app/_models/member';
 import { take } from 'rxjs';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-member-edit',
@@ -23,7 +24,7 @@ export class MemberEditComponent implements OnInit  {
   user: User | null = null;
   randomImage: string | undefined;
 
-  constructor(private accountService: AccountService, private memberService: MembersService, private toastr: ToastrService) {
+  constructor(private accountService: AccountService, private memberService: MembersService, private toastr: ToastrService, private router: Router) {
     this.accountService.currentUser$.pipe(take(1)).subscribe({
       next: user => this.user = user
     })
@@ -56,4 +57,12 @@ export class MemberEditComponent implements OnInit  {
     const image = './assets/user_images/' + rndInt +'.jpg'
     return image;
   }
+  deleteUser() {
+    if(!this.member) return;
+    this.memberService.deleteUser(this.member.userName).subscribe(() => {
+      this.router.navigateByUrl('/');
+      this.accountService.logout();
+    });
+  }
+
 }

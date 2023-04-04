@@ -19,6 +19,11 @@ namespace API.Data
             _context = context;
         }
 
+        public void delete(AppUser user)
+        {
+             _context.Users.Remove(user);
+        }
+
         public async Task<MemberDto> GetMemberAsync(string username)
         {
             return await _context.Users.Where(x=> x.UserName == username)

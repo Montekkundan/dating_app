@@ -13,6 +13,9 @@ import { AuthGuard } from './_guards/auth.guard';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
 import { AdminGuard } from './_guards/admin.guard';
+import { UsernameExistsResolver } from './_resolvers/username-exists.resolver';
+import { PrivacyPolicyComponent } from './legal/privacy-policy/privacy-policy.component';
+import { TermsAndConditionsComponent } from './legal/terms-and-conditions/terms-and-conditions.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -21,13 +24,19 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       {path: 'members', component: MemberListComponent },
-      {path: 'members/:username', component: MemberDetailComponent},
+      {
+        path: 'members/:username',
+        component: MemberDetailComponent,
+        resolve: { userExists: UsernameExistsResolver },
+      },
       {path: 'member/edit', component: MemberEditComponent, canDeactivate: [PreventUnsavedChangesGuard]},
       {path: 'lists', component: ListsComponent},
       {path: 'messages', component: MessagesComponent},
       {path: 'admin', component: AdminPanelComponent, canActivate: [AdminGuard]},
     ],
   },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'terms-and-conditions', component: TermsAndConditionsComponent },
   {path: 'errors', component: TestErrorComponent},
   {path: 'not-found', component: NotFoundComponent},
   {path: 'server-error', component: ServerErrorComponent},
