@@ -32,12 +32,23 @@ public class UsersController : BaseApiController
     [HttpGet]
     public async Task<ActionResult<PagedList<MemberDto>>> GetUsers([FromQuery]UserParams userParams)
     {
-         var currentUser = await _uow.UserRepository.GetUserByUsernameAsync(User.GetUsername());
-        userParams.CurrentUsername = currentUser.UserName;
+         var gender = await _uow.UserRepository.GetUserGender(User.GetUsername());
+        userParams.CurrentUsername = User.GetUsername();
 
             if (string.IsNullOrEmpty(userParams.Gender))
             {
-                userParams.Gender = currentUser.Gender == "male" ? "female" : "male";
+                switch (gender)
+                {
+                    case "male":
+                        userParams.Gender = "female";
+                        break;
+                    case "female":
+                        userParams.Gender = "male";
+                        break;
+                    default:
+                        userParams.Gender = "other";
+                        break;
+                }
             }
         var users = await _uow.UserRepository.GetMembersAsync(userParams);
 
