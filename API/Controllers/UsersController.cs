@@ -169,6 +169,9 @@ public class UsersController : BaseApiController
                 if (result.Error != null) return BadRequest(result.Error.Message);
             }
         }
+           // Delete user's messages
+        // var messages = await _uow.MessageRepository.GetMessagesForUserAsync(username);
+        // _uow.MessageRepository.DeleteMessages(messages);
 
         _uow.UserRepository.delete(user);
 

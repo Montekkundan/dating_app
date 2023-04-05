@@ -79,3 +79,6 @@ D:\coding\dating_app\API\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFr
 D:\coding\dating_app\API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 D:\coding\dating_app\API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 D:\coding\dating_app\API\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+D:\coding\dating_app\API\bin\Debug\net7.0\API.staticwebassets.runtime.json
+D:\coding\dating_app\API\bin\Debug\net7.0\Npgsql.dll
+D:\coding\dating_app\API\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
