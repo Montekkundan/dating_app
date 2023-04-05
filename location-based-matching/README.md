@@ -1,4 +1,5 @@
 # A more sophisticated location-based matching algorithm
+
  is one that can take into account not only the distance between two locations, but also other factors such as the road network, the traffic conditions, the user preferences, and the user behavior. For example, a more sophisticated location-based matching algorithm can:
 
 - Use map matching techniques to align the GPS trajectories of users to the road segments on a map and infer their travel routes.
