@@ -1,4 +1,8 @@
 
 .landing {
-  background-image: url("/assets/Flag.jpg");
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
