@@ -25,3 +25,7 @@
 - Social Media Integration: Allow users to sign up with their social media accounts and share content from the app to their profiles. This can help you learn about OAuth, social media APIs, and best practices for integrating third-party services.
 
 - Gamification
+
+## Docker
+
+`docker run --name postgres -e POSTGRES_PASSWORD=postgrespw -p 5432:5432 -d postgres:latest`
