@@ -1,34 +1,32 @@
-# fly.toml file generated for thedatingcompany on 2023-04-06T22:11:20-07:00
+# fly.toml file generated for thedatingcompany on 2023-04-07T01:09:25-07:00
 
 app = "thedatingcompany"
 kill_signal = "SIGINT"
 kill_timeout = 5
-mounts = []
 primary_region = "sea"
-processes = []
 
 [build]
   image = "montekkundan/datingapp:latest"
 
 [env]
   ASPNETCORE_URLS = "http://+:8080"
-  CloudinarySettings__CloudName = "dkjuzgnfn"
   CloudinarySettings__ApiKey = "165121674573557"
+  CloudinarySettings__CloudName = "dkjuzgnfn"
 
 [[services]]
+  protocol = "tcp"
   internal_port = 8080
   processes = ["app"]
-  protocol = "tcp"
+
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+    force_https = true
+
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]
   [services.concurrency]
+    type = "connections"
     hard_limit = 25
     soft_limit = 20
-    type = "connections"
-
-  [[services.ports]]
-    force_https = true
-    handlers = ["http"]
-    port = 80
-
-  [[services.ports]]
-    handlers = ["tls", "http"]
-    port = 443
