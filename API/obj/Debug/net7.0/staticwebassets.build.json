@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Re2bBROHwbSLhrGtWAkU9oyI4zmbTXhIY+npESpOJO8=",
+  "Hash": "t2lA5iwTucDgckAYM1aqP17fT7uHjNrwbvG+6UMQras=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -8,19 +8,19 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "API/wwwroot",
+      "Name": "API\\wwwroot",
       "Source": "API",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/3rdpartylicenses.txt",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\3rdpartylicenses.txt",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "3rdpartylicenses.txt",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/3rdpartylicenses.txt"
+      "OriginalItemSpec": "wwwroot\\3rdpartylicenses.txt"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/assets/Flag_mobile.jpg",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\Flag_mobile.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/Flag_mobile.jpg",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/Flag_mobile.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\Flag_mobile.jpg"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/assets/Flag.jpg",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\Flag.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/Flag.jpg",
       "AssetKind": "All",
@@ -65,13 +65,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/Flag.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\Flag.jpg"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/assets/user_images/1.jpg",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\user_images\\1.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/user_images/1.jpg",
       "AssetKind": "All",
@@ -82,13 +82,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/user_images/1.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\user_images\\1.jpg"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/assets/user_images/10.jpg",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\user_images\\10.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/user_images/10.jpg",
       "AssetKind": "All",
@@ -99,13 +99,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/user_images/10.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\user_images\\10.jpg"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/assets/user_images/11.jpg",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\user_images\\11.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/user_images/11.jpg",
       "AssetKind": "All",
@@ -116,13 +116,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/user_images/11.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\user_images\\11.jpg"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/assets/user_images/12.jpg",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\user_images\\12.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/user_images/12.jpg",
       "AssetKind": "All",
@@ -133,13 +133,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/user_images/12.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\user_images\\12.jpg"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/assets/user_images/13.jpg",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\user_images\\13.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/user_images/13.jpg",
       "AssetKind": "All",
@@ -150,13 +150,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/user_images/13.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\user_images\\13.jpg"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/assets/user_images/14.jpg",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\user_images\\14.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/user_images/14.jpg",
       "AssetKind": "All",
@@ -167,13 +167,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/user_images/14.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\user_images\\14.jpg"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/assets/user_images/15.jpg",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\user_images\\15.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/user_images/15.jpg",
       "AssetKind": "All",
@@ -184,13 +184,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/user_images/15.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\user_images\\15.jpg"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/assets/user_images/2.jpg",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\user_images\\2.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/user_images/2.jpg",
       "AssetKind": "All",
@@ -201,13 +201,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/user_images/2.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\user_images\\2.jpg"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/assets/user_images/3.jpg",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\user_images\\3.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/user_images/3.jpg",
       "AssetKind": "All",
@@ -218,13 +218,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/user_images/3.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\user_images\\3.jpg"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/assets/user_images/4.jpg",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\user_images\\4.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/user_images/4.jpg",
       "AssetKind": "All",
@@ -235,13 +235,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/user_images/4.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\user_images\\4.jpg"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/assets/user_images/5.jpg",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\user_images\\5.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/user_images/5.jpg",
       "AssetKind": "All",
@@ -252,13 +252,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/user_images/5.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\user_images\\5.jpg"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/assets/user_images/6.jpg",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\user_images\\6.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/user_images/6.jpg",
       "AssetKind": "All",
@@ -269,13 +269,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/user_images/6.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\user_images\\6.jpg"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/assets/user_images/7.jpg",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\user_images\\7.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/user_images/7.jpg",
       "AssetKind": "All",
@@ -286,13 +286,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/user_images/7.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\user_images\\7.jpg"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/assets/user_images/8.jpg",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\user_images\\8.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/user_images/8.jpg",
       "AssetKind": "All",
@@ -303,13 +303,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/user_images/8.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\user_images\\8.jpg"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/assets/user_images/9.jpg",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\user_images\\9.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/user_images/9.jpg",
       "AssetKind": "All",
@@ -320,13 +320,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/user_images/9.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\user_images\\9.jpg"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/favicon.ico",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\favicon.ico",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -337,13 +337,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/favicon.ico"
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/index.html",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\index.html",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -354,13 +354,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/index.html"
+      "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/main.5825ede2dccd1d22.js",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\main.5825ede2dccd1d22.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "main.5825ede2dccd1d22.js",
       "AssetKind": "All",
@@ -371,13 +371,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/main.5825ede2dccd1d22.js"
+      "OriginalItemSpec": "wwwroot\\main.5825ede2dccd1d22.js"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/polyfills.e6d45f3c45a8528e.js",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\polyfills.e6d45f3c45a8528e.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "polyfills.e6d45f3c45a8528e.js",
       "AssetKind": "All",
@@ -388,13 +388,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/polyfills.e6d45f3c45a8528e.js"
+      "OriginalItemSpec": "wwwroot\\polyfills.e6d45f3c45a8528e.js"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/runtime.7ae29a296d479790.js",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\runtime.7ae29a296d479790.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "runtime.7ae29a296d479790.js",
       "AssetKind": "All",
@@ -405,13 +405,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/runtime.7ae29a296d479790.js"
+      "OriginalItemSpec": "wwwroot\\runtime.7ae29a296d479790.js"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/scripts.4768cbff500f40cc.js",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\scripts.4768cbff500f40cc.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "scripts.4768cbff500f40cc.js",
       "AssetKind": "All",
@@ -422,13 +422,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/scripts.4768cbff500f40cc.js"
+      "OriginalItemSpec": "wwwroot\\scripts.4768cbff500f40cc.js"
     },
     {
-      "Identity": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/styles.089d7d6ba7de5097.css",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\styles.089d7d6ba7de5097.css",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/montekkundan/Documents/GitHub/dating_app/API/wwwroot/",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "styles.089d7d6ba7de5097.css",
       "AssetKind": "All",
@@ -439,7 +439,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/styles.089d7d6ba7de5097.css"
+      "OriginalItemSpec": "wwwroot\\styles.089d7d6ba7de5097.css"
     }
   ]
 }

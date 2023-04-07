@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/montekkundan/Documents/GitHub/dating_app/API/API.csproj": {}
+    "D:\\coding\\dating_app\\API\\API.csproj": {}
   },
   "projects": {
-    "/Users/montekkundan/Documents/GitHub/dating_app/API/API.csproj": {
+    "D:\\coding\\dating_app\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/montekkundan/Documents/GitHub/dating_app/API/API.csproj",
+        "projectUniqueName": "D:\\coding\\dating_app\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "/Users/montekkundan/Documents/GitHub/dating_app/API/API.csproj",
-        "packagesPath": "/Users/montekkundan/.nuget/packages/",
-        "outputPath": "/Users/montekkundan/Documents/GitHub/dating_app/API/obj/",
+        "projectPath": "D:\\coding\\dating_app\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\monte\\.nuget\\packages\\",
+        "outputPath": "D:\\coding\\dating_app\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/montekkundan/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\monte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -92,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
