@@ -30,6 +30,10 @@
 
 `docker run --name postgres -e POSTGRES_PASSWORD=postgrespw -p 5432:5432 -d postgres:latest`
 
+`docker build -t montekkundan/datingapp .`
+
+`docker push montekkundan/datingapp:latest`
+
 `docker run --rm -it -p 8080:80 montekkundan/datingapp:latest`
 
 ## Database Architecture

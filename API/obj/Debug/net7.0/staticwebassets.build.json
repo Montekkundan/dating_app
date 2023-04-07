@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "t2lA5iwTucDgckAYM1aqP17fT7uHjNrwbvG+6UMQras=",
+  "Hash": "yG56wU4rygrIGfM5bRMTw4fm2ilYNRu5Pem0nNgSvuY=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\Flag.jpg"
+    },
+    {
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\home.mp4",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "assets/home.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\home.mp4"
     },
     {
       "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\user_images\\1.jpg",
@@ -357,12 +374,12 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\main.5825ede2dccd1d22.js",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\main.bafd332099a97cd0.js",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "main.5825ede2dccd1d22.js",
+      "RelativePath": "main.bafd332099a97cd0.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -371,7 +388,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\main.5825ede2dccd1d22.js"
+      "OriginalItemSpec": "wwwroot\\main.bafd332099a97cd0.js"
     },
     {
       "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\polyfills.e6d45f3c45a8528e.js",

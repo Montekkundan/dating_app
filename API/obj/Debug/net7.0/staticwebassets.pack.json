@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\assets\\Flag_mobile.jpg"
     },
     {
+      "Id": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\home.mp4",
+      "PackagePath": "staticwebassets\\assets\\home.mp4"
+    },
+    {
       "Id": "D:\\coding\\dating_app\\API\\wwwroot\\assets\\user_images\\1.jpg",
       "PackagePath": "staticwebassets\\assets\\user_images\\1.jpg"
     },
@@ -81,8 +85,8 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "D:\\coding\\dating_app\\API\\wwwroot\\main.5825ede2dccd1d22.js",
-      "PackagePath": "staticwebassets\\main.5825ede2dccd1d22.js"
+      "Id": "D:\\coding\\dating_app\\API\\wwwroot\\main.bafd332099a97cd0.js",
+      "PackagePath": "staticwebassets\\main.bafd332099a97cd0.js"
     },
     {
       "Id": "D:\\coding\\dating_app\\API\\wwwroot\\polyfills.e6d45f3c45a8528e.js",
