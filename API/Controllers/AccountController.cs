@@ -25,6 +25,8 @@ namespace API.Controllers
         public async Task<ActionResult<UserDto>> Register (RegisterDto registerDto) 
         {
             if (await UserExists(registerDto.Username)) return BadRequest("UserName is taken");
+            if (registerDto.Username.Contains(" ")) return BadRequest("No spaces in username");
+
 
             var user = _mapper.Map<AppUser>(registerDto);
 
