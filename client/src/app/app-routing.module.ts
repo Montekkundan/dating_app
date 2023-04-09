@@ -16,6 +16,7 @@ import { AdminGuard } from './_guards/admin.guard';
 import { UsernameExistsResolver } from './_resolvers/username-exists.resolver';
 import { PrivacyPolicyComponent } from './legal/privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './legal/terms-and-conditions/terms-and-conditions.component';
+import { ContributorsComponent } from './contributors/contributors.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -36,6 +37,7 @@ const routes: Routes = [
     ],
   },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'contributors', component: ContributorsComponent },
   { path: 'terms-and-conditions', component: TermsAndConditionsComponent },
   {path: 'errors', component: TestErrorComponent},
   {path: 'not-found', component: NotFoundComponent},

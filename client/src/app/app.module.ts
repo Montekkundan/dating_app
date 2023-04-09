@@ -32,6 +32,7 @@ import { PhotoManagementComponent } from './admin/photo-management/photo-managem
 import { RolesModalComponent } from './modals/roles-modal/roles-modal.component';
 import { PrivacyPolicyComponent } from './legal/privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './legal/terms-and-conditions/terms-and-conditions.component';
+import { ContributorsComponent } from './contributors/contributors.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { TermsAndConditionsComponent } from './legal/terms-and-conditions/terms-
     PhotoManagementComponent,
     RolesModalComponent,
     PrivacyPolicyComponent,
-    TermsAndConditionsComponent
+    TermsAndConditionsComponent,
+    ContributorsComponent
   ],
   imports: [
     BrowserAnimationsModule,
