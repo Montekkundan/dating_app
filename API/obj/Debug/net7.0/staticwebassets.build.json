@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YyG1LuuL6fT/cw/iW+EPPjWnpMh80ddFNmPDXM4539M=",
+  "Hash": "r83L98Cgtmr3E6lv5SqrQE6TIfBB25qRUThiZhyi7QQ=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -374,12 +374,12 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\main.4763675b7e2b13f7.js",
+      "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\main.2c139762e95f1183.js",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\coding\\dating_app\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "main.4763675b7e2b13f7.js",
+      "RelativePath": "main.2c139762e95f1183.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -388,7 +388,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\main.4763675b7e2b13f7.js"
+      "OriginalItemSpec": "wwwroot\\main.2c139762e95f1183.js"
     },
     {
       "Identity": "D:\\coding\\dating_app\\API\\wwwroot\\polyfills.e6d45f3c45a8528e.js",

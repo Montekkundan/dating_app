@@ -27,6 +27,15 @@ namespace API.Controllers
             if (await UserExists(registerDto.Username)) return BadRequest("UserName is taken");
             if (registerDto.Username.Contains(" ")) return BadRequest("No spaces in username");
 
+               // Check if password meets the requirements
+                var passwordValidator = new PasswordValidator<AppUser>();
+                var passwordValidationResult = await passwordValidator.ValidateAsync(_userManager, null, registerDto.Password);
+                if (!passwordValidationResult.Succeeded)
+                {
+                    var error = passwordValidationResult.Errors.FirstOrDefault()?.Description;
+                    return BadRequest(error);
+                }
+
 
             var user = _mapper.Map<AppUser>(registerDto);
 
